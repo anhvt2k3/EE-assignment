@@ -1,0 +1,82 @@
+<html lang="en">
+
+<?php
+
+// Check for message after failed attempts 
+if (isset($_REQUEST['msg'])) {
+  $msg = $_REQUEST['msg'];
+} else
+  $msg = 'none';
+
+?>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/light_style.css">
+  <!--Bootstrap 5 CDN-->
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <title>SignUp</title>
+</head>
+
+<body style="background-image: url('https://wallpaper.dog/large/10930724.png'); background-size: cover; height: 100%;">
+
+  <header>
+    <a href="../index.html"><img src="../img/logo/800x800.png" class="logo"></a>
+  </header>
+  <div style=" height: 100%; display: flex; justify-content: center; align-items: center;">
+    <div class="card border-dark mb-3 form title">
+      <div class="card-header">Login
+        <?php
+        if ($msg == "failed") {
+          ?>
+          <a style="color: red;"> Failed! Please Retry</a>
+          <?php
+        }
+        ?>
+      </div>
+      <div class="card-body text-dark">
+        <form id="myForm" onsubmit="return validateForm()" action="../auth/login_processing.php" method="post">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="text" name="email" class="form-control" id="exampleInputEmail1" required>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" required>
+          </div>
+          <div class="mb-3 form-check" style=" width: 100%; display: flex; padding: 0; justify-content: space-between;">
+            <input type="submit" class="btn btn-dark"></input>
+            <a href="signup.php" class="card-link">No account?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function validateForm() {
+      let x = document.forms["myForm"]["email"].value;
+      let mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+      if (x.match(mailformat) == null) {
+        alert("Invalid Email");
+        return false;
+      };
+      let y = document.forms["myForm"]["password"].value;
+      if (y.length < 8) {
+        alert("Password must be longer than 8 characters");
+        return false;
+      };
+    }
+  </script>
+
+</body>
+
+</html>

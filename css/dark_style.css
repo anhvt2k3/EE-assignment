@@ -1,0 +1,435 @@
+@media screen and (max-width: 1080px) {
+    ul {
+        /* remove list's default indentation*/
+        padding: 0;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    nav {
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        padding-right: 1em;
+        font-size: 3vw;
+    }
+
+    html {
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background-color: #000;
+        font-family: 'Montserrat', sans-serif;
+        align-items: center;
+    }
+
+    /*Fade-in Animation Styling*/
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    header {
+        height: fit-content;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    section {
+        max-width: 98%;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        margin-bottom: 0.5em;
+        height: fit-content;
+        /*TODO: change to black*/
+        background-color: black;
+        color: white;
+        font-size: 4vw;
+        display: block;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .lightsection {
+        margin-bottom: 0.5vw;
+        height: 45%;
+        /*TODO: change to black*/
+        background-color: white;
+        color: white;
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    article {
+        height: 100%;
+        background-color: silver;
+        color: white;
+        font-size: 1.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        height: fit-content;
+        padding: 1vw;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .center {
+        display: flex;
+        align-items: center;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        text-align: center;
+    }
+
+    .grid-fixed-2 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        text-align: center;
+    }
+
+    .logo {
+        height: 4vw;
+        width: 4vw;
+        margin: 0.5em;
+    }
+
+    img {
+        width: 100%;
+        object-fit: fill;
+    }
+
+    i {
+        margin-left: 0.5em;
+        color: #fff;
+    }
+
+    a {
+        color: white;
+    }
+
+    p {
+        font-size: 2vw;
+    }
+
+    .left-bound {
+        padding-left: 2vw;
+        text-align: justify;
+    }
+
+    .right-bound {
+        width: 100%;
+        padding-right: 2vw;
+        text-align: right;
+    }
+
+    .overlay {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    #title {
+        font-size: 8vw;
+        /*Fade-in Animation Styling*/
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    #footer {
+        font-size: 1em;
+    }
+
+    .button {
+        height: 1.5em;
+        width: 1.5em;
+        background-color: black;
+        color: #fff;
+        display: inline-block;
+        cursor: pointer;
+        transition-duration: 0.5s;
+        justify-content: center;
+    }
+
+    /*Dropdown Stylings*/
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        font-size: 16px;
+        margin: auto;
+        border-radius: 5px;
+        right: 0px;
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        box-shadow: 2px 8px 16px 2px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        font-size: small;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1vh 1vh;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        border-radius: 5px;
+        background-color: #f1f1f1
+    }
+
+
+}
+
+@media screen and (min-width: 1080px) {
+    ul {
+        /* remove list's default indentation*/
+        padding: 0;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    nav {
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        font-size: 1.5em;
+    }
+
+    html {
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background-color: #000;
+        font-family: 'Montserrat', sans-serif;
+        align-items: center;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /*Fade-in Animation Styling*/
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    header {
+        height: fit-content;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    section {
+        max-width: 98%;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: 0.5em;
+        height: fit-content;
+        /*TODO: change to black*/
+        background-color: black;
+        color: white;
+        font-size: 3em;
+        display: block;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .lightsection {
+        max-width: 98%;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        height: 45%;
+        /*TODO: change to black*/
+        background-color: white;
+        color: white;
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    article {
+        height: 100%;
+        background-color: silver;
+        color: white;
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        height: fit-content;
+        padding: 0.3em;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .center {
+        display: flex;
+        align-items: center;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        text-align: center;
+    }
+
+    .grid-fixed-2 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        text-align: center;
+    }
+
+    .logo {
+        height: 2em;
+        width: 2em;
+        margin: 0.5em;
+    }
+
+    img {
+        width: 100%;
+        object-fit: fill;
+    }
+
+    i {
+        margin-left: 0.5em;
+        color: #fff;
+    }
+
+    a {
+        color: white;
+    }
+
+    p {
+        font-size: 0.5em;
+    }
+
+    .left-bound {
+        padding-left: 1em;
+        text-align: justify;
+    }
+
+    .right-bound {
+        width: 100%;
+        padding-right: 1em;
+        text-align: right;
+    }
+
+    .overlay {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    #title {
+        font-size: 2em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /*Fade-in Animation Styling*/
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    #footer {
+        font-size: 1em;
+    }
+
+    .button {
+        height: 1.5em;
+        width: 1.5em;
+        background-color: black;
+        color: #fff;
+        display: inline-block;
+        cursor: pointer;
+        transition-duration: 0.5s;
+        justify-content: center;
+    }
+
+    /*Dropdown Stylings*/
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        font-size: 16px;
+        margin: auto;
+        border-radius: 5px;
+        right: 0px;
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        box-shadow: 2px 8px 16px 2px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+    }
+
+    .dropdown-content a {
+        color: black;
+        font-size: small;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1vw 1vw;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        border-radius: 5px;
+        background-color: #f1f1f1
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+}
