@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 require __DIR__ . "\\vendor\\autoload.php";
 
@@ -26,4 +26,4 @@ $checkoutSess = \Stripe\Checkout\Session::create([
 
 http_response_code(303);
 header("Location: " . $checkoutSess->url);
-?>
+?> -->
