@@ -1,6 +1,6 @@
 <html lang="en">
 <?php
-include("../db/conn.php");
+include ("../db/conn.php");
 // get products
 $start = 0;
 $item_per_call = isset($_POST["limit"]) ? $_POST["limit"] : 10;
@@ -46,13 +46,13 @@ $result1 = mysqli_query($conn, $sql1);
         header("Location: ../screens/login.php");
     } else
         ;
-    include("../partials/bootstrap_header.php");
+    include ("../partials/bootstrap_header.php");
     ?>
     <section>
         <div class="center">
             <h2>Our Products</h2>
         </div>
-        Items per page:
+        <!-- Items per page:
         <form method="post" action="#">
             <select name="limit" id="limit">
                 <option disabled="disabled" selected="selected">--- Items loaded ---</option>
@@ -63,26 +63,33 @@ $result1 = mysqli_query($conn, $sql1);
                     </option>
                 <?php endforeach; ?>
             </select>
-        </form>
+        </form> -->
         <div class="row" style="justify-content: space-between;">
             <?php
             while ($row = mysqli_fetch_assoc($result1)) {
                 ?>
-                <div class="card" style="width: 18rem; padding: 5px; margin: 5px;">
-                    <img src="..\img\img\daniel-korpai-HyTwtsk8XqA-unsplash.jpg" class="card-img-top" alt="..."
-                        loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <?php echo $row["productName"] ?>
-                        </h5>
-                        <p class="card-text">
-                            <strong>
-                                <?php echo $row["currency"] ?>
-                            </strong>
-                            <?php echo $row['prices']; ?>
-                        </p>
-                        <a href="#" class="btn btn-primary" style="float:right;">Buy Now!</a>
-                    </div>
+                <div class="col-sm-4">
+                    <form method="post" action="../controller/checkout.php">
+                        <div class="card" style="width: 18rem; padding: 5px; margin: 5px;">
+                            <img src="..\img\img\daniel-korpai-HyTwtsk8XqA-unsplash.jpg" class="card-img-top" alt="..."
+                                loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <?php echo $row["productName"] ?>
+                                </h5>
+                                <input type="hidden" name="productName" value="<?php echo $row["productName"] ?>">
+                                <p class="card-text">
+                                    <strong>
+                                        <?php echo $row["currency"] ?>
+                                    </strong>
+                                    <?php echo $row['prices'] ?>
+                                </p>
+                                <input type="hidden" name="price" value="<?php echo $row["prices"] ?>">
+                                <button type="submit" class="btn btn-primary" name="checkout"><span><span>Buy
+                                            Now!</span></span></button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <?php
             }
@@ -123,7 +130,7 @@ $result1 = mysqli_query($conn, $sql1);
         })
     </script>
     <?php
-    include("../partials/footer.php") ?>
+    include ("../partials/footer.php") ?>
 </body>
 
 </html>

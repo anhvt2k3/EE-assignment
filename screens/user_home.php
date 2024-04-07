@@ -18,7 +18,7 @@ session_start();
 
 <body>
     <!--Actual Content-->
-    <?php include("../partials/header.php"); ?>
+    <?php include ("../partials/header.php"); ?>
     <section>
         <?php echo ("Hello, user " . $_SESSION['username']) ?>
     </section>
@@ -36,7 +36,7 @@ session_start();
     </script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap" async defer></script>
-    <?php include('../partials/footer.php') ?>
+    <?php include ('../partials/footer.php') ?>
 </body>
 
 </html>
