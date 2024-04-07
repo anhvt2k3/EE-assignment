@@ -2,7 +2,7 @@
 
 require __DIR__ . "\\vendor\\autoload.php";
 
-$key = "sk_test_51P2qvJLo4BElNGZ9VRehN2tPxoEB7CWpxfyUIWFVPfM1wAbsww6rxp1j9fQrm9Kynp4GdUXYYvuj3J4wil4A52NT00TjRs5umX";
+// $key = "sk_test_51P2qvJLo4BElNGZ9VRehN2tPxoEB7CWpxfyUIWFVPfM1wAbsww6rxp1j9fQrm9Kynp4GdUXYYvuj3J4wil4A52NT00TjRs5umX";
 
 \Stripe\Stripe::setApiKey($key);
 
