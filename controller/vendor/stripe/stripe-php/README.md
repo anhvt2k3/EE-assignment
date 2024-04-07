@@ -48,20 +48,6 @@ The bindings require the following extensions in order to work properly:
 
 If you use Composer, these dependencies should be handled automatically. If you install manually, you'll want to make sure that these extensions are available.
 
-## Getting Started
-
-Simple usage looks like:
-
-```php
-$stripe = new \Stripe\StripeClient('sk_test_BQokikJOvBiI2HlWgH4olfQ2');
-$customer = $stripe->customers->create([
-    'description' => 'example customer',
-    'email' => 'email@example.com',
-    'payment_method' => 'pm_card_visa',
-]);
-echo $customer;
-```
-
 ### Client/service patterns vs legacy patterns
 
 You can continue to use the legacy integration patterns used prior to version [7.33.0](https://github.com/stripe/stripe-php/blob/master/CHANGELOG.md#7330---2020-05-14). Review the [migration guide](https://github.com/stripe/stripe-php/wiki/Migration-to-StripeClient-and-services-in-7.33.0) for the backwards-compatible client/services pattern changes.
