@@ -61,18 +61,35 @@ $result1 = mysqli_query($conn, $sql1);
                         echo "selected" ?> value="<?= $intervals; ?>">
                         <?= $intervals; ?>
                     </option>
-                <?php endforeach; ?>
-            </select>
+                    <?php endforeach; ?>
+                </select>
         </form> -->
         <div class="row" style="justify-content: space-between;">
+        <!-- <?php
+        session_start();
+        if (!isset($_SESSION["cart"])) {
+            $_SESSION["cart"] = [];
+        }
+        ?>
+        <script>
+        function add2cart() {
+            var cart = <?php echo json_encode($_SESSION["cart"]); ?>;
+            var item = {
+                productName: "<?php echo $row["productName"] ?>",
+                price: "<?php echo $row["prices"] ?>"
+            };
+            cart.push(item);
+            <?php $_SESSION["cart"] = $cart; ?>
+            console.log(cart);
+        }
+         </script> -->
             <?php
             while ($row = mysqli_fetch_assoc($result1)) {
                 ?>
                 <div class="col-sm-4">
                     <form method="post" action="../controller/checkout.php">
                         <div class="card" style="width: 18rem; padding: 5px; margin: 5px;">
-                            <img src="..\img\img\daniel-korpai-HyTwtsk8XqA-unsplash.jpg" class="card-img-top" alt="..."
-                                loading="lazy">
+                            <img src="..\img\img\daniel-korpai-HyTwtsk8XqA-unsplash.jpg" class="card-img-top" alt="..." loading="lazy">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <?php echo $row["productName"] ?>
@@ -85,8 +102,9 @@ $result1 = mysqli_query($conn, $sql1);
                                     <?php echo $row['prices'] ?>
                                 </p>
                                 <input type="hidden" name="price" value="<?php echo $row["prices"] ?>">
-                                <button type="submit" class="btn btn-primary" name="checkout"><span><span>Buy
-                                            Now!</span></span></button>
+                                <button type="submit" class="btn btn-primary" name="checkout"><span><span>Buy Now!</span></span></button>
+                                <button type="button" class="btn btn-success" name="addToCart" onclick=add2cart
+                                ><span><span>Add to Cart</span></span></button>
                             </div>
                         </div>
                     </form>

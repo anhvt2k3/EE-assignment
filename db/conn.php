@@ -2,10 +2,10 @@
 // Connect to mySQL
 $servername = "localhost";
 $username = "root";
-$password = "1234";
+$password = "root";
 $dbname = "OnlineStore";
 
-$mysqli = new mysqli("localhost", "root", "1234", "OnlineStore");
+$mysqli = new mysqli("localhost", "root", "root", "OnlineStore");
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
