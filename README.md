@@ -1,2 +1,2 @@
-# WebProgLab
- Web Programming Lab Exercise 
+# WebProgLab (inherit)
+# EEcommerce
