@@ -28,11 +28,11 @@
 <body>
     <div class="container">
         <div class="success-message">Success! Your payment has been done.</div>
-        <a href="http://localhost/WebProgLab/screens/product_listing.php?page-no=0">Click here to return.</a>
+        <a href="../screens/product_listing.php?page-no=0">Click here to return.</a>
     </div>
     <script>
         setTimeout(function() {
-            window.location.href = "http://localhost/WebProgLab/screens/product_listing.php?page-no=0";
+            window.location.href = "../screens/product_listing.php?page-no=0";
         }, 10000);
     </script>
 </body>
